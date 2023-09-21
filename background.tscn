@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://dnjj1tp2qnecw"]
+
+[ext_resource type="Texture2D" uid="uid://csi8mwd6axwoa" path="res://assets/parallax/parallax-00.png" id="1_fr8pm"]
+[ext_resource type="Script" path="res://background.gd" id="1_kkc6u"]
+[ext_resource type="Texture2D" uid="uid://cyivd2hhvm3m4" path="res://assets/parallax/parallax-01.png" id="2_ae0pv"]
+[ext_resource type="Script" path="res://ParallaxLayer.gd" id="2_ss3x3"]
+[ext_resource type="Texture2D" uid="uid://cffa7txswvsa1" path="res://assets/parallax/parallax-02.png" id="3_qo3pn"]
+[ext_resource type="Texture2D" uid="uid://d0067rbmfge4x" path="res://assets/parallax/parallax-03.png" id="4_bm4v6"]
+[ext_resource type="Script" path="res://ParallaxLayer2.gd" id="4_bpbvr"]
+[ext_resource type="Texture2D" uid="uid://dlnmocru8ylcn" path="res://assets/parallax/parallax-04.png" id="5_8iacu"]
+[ext_resource type="Script" path="res://mount.gd" id="6_tau6m"]
+[ext_resource type="Script" path="res://forest.gd" id="8_xbrss"]
+[ext_resource type="Script" path="res://ParallaxLayer5.gd" id="10_52ivv"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_kkc6u")
+
+[node name="sky" type="ParallaxLayer" parent="."]
+script = ExtResource("2_ss3x3")
+
+[node name="Sprite2D" type="Sprite2D" parent="sky"]
+position = Vector2(793.75, 344)
+scale = Vector2(1.10104, 1.90556)
+texture = ExtResource("1_fr8pm")
+
+[node name="cloud" type="ParallaxLayer" parent="."]
+script = ExtResource("4_bpbvr")
+
+[node name="Sprite2D" type="Sprite2D" parent="cloud"]
+position = Vector2(787, 166)
+scale = Vector2(1.09653, 1.13333)
+texture = ExtResource("2_ae0pv")
+
+[node name="mount" type="ParallaxLayer" parent="."]
+script = ExtResource("6_tau6m")
+
+[node name="Sprite2D" type="Sprite2D" parent="mount"]
+position = Vector2(791, 300)
+scale = Vector2(1.10069, 0.869444)
+texture = ExtResource("3_qo3pn")
+
+[node name="forest" type="ParallaxLayer" parent="."]
+script = ExtResource("8_xbrss")
+
+[node name="Sprite2D" type="Sprite2D" parent="forest"]
+position = Vector2(803, 303)
+scale = Vector2(1.10764, 1)
+texture = ExtResource("4_bm4v6")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+position = Vector2(-5, 13)
+script = ExtResource("10_52ivv")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(802, 328.75)
+scale = Vector2(1.10938, 1.3584)
+texture = ExtResource("5_8iacu")
